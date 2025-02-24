@@ -10,6 +10,21 @@ import {
 let pluginInitialized = false;
 let plugin: lunr.Builder.Plugin | undefined;
 
+const USER_GUIDE = [
+  "docs/install",
+  "docs/db-connect",
+  "docs/table-design",
+  "docs/data-operate",
+  "docs/query-data",
+  "docs/query-acceleration",
+  "docs/lakehouse",
+  "docs/log-storage-analysis",
+  "docs/compute-storage-decoupled",
+];
+const Management = "docs/admin-manual";
+const SQL_REFENECE = "docs/sql-manual";
+const RELEASENOTES = "docs/releasenotes";
+
 export function buildIndex(
   allDocuments: SearchDocument[][],
   {
@@ -80,11 +95,22 @@ export function buildIndex(
         this.metadataWhitelist = ["position"];
 
         documents.forEach((doc) => {
-          this.add({
-            ...doc,
-            // The ref must be a string.
-            i: doc.i.toString(),
-          });
+          // sql refenece ，user guide ，Management 权重增加，releasenote权重降低
+          let boost = 1;
+          if (
+            doc.u.includes(Management) ||
+            doc.u.includes(SQL_REFENECE) ||
+            USER_GUIDE.some((item) => doc.u.includes(item))
+          ){
+            boost = 2
+          }else if(doc.u.includes(RELEASENOTES)){
+            boost = 0.8
+          }
+            this.add({
+              ...doc,
+              // The ref must be a string.
+              i: doc.i.toString(),
+            },{ boost });
         });
       }),
     }));

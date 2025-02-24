@@ -43,4 +43,5 @@ export function sortSearchResults(results: InitialSearchResult[]): void {
 
     return aPageIndex - bPageIndex;
   });
+  (results as SearchResult[]).sort((a, b) => b.score - a.score);
 }
