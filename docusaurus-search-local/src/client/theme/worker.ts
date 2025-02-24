@@ -28,6 +28,7 @@ interface IndexesData {
 
 const cache = new Map<string, Promise<IndexesData>>();
 
+// worker
 export class SearchWorker {
   async fetchIndexes(baseUrl: string, searchContext: string): Promise<void> {
     await this.lowLevelFetchIndexes(baseUrl, searchContext);
