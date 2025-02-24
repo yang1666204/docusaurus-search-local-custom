@@ -61,7 +61,7 @@ function Home() {
               href="https://github.com/easyops-cn/docusaurus-search-local"
               style={{ color: "var(--ifm-hero-text-color)" }}
             >
-              @easyops-cn/docusaurus-search-local
+              @yang1666204/docusaurus-search-local
             </a>
             .
           </p>

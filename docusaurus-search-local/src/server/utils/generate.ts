@@ -126,7 +126,7 @@ export function generate(config: ProcessedPluginOptions, dir: string): string {
     constantContents.push(
       `require(${JSON.stringify(
         require.resolve(
-          "@easyops-cn/docusaurus-search-local/dist/client/shared/lunrLanguageZh"
+          "@yang1666204/docusaurus-search-local/dist/client/shared/lunrLanguageZh"
         )
       )}).lunrLanguageZh(lunr);`
     );

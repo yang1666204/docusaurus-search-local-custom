@@ -1,6 +1,6 @@
-# @easyops-cn/docusaurus-search-local
+# @yang1666204/docusaurus-search-local
 
-[![Npm Version](https://img.shields.io/npm/v/@easyops-cn/docusaurus-search-local)](https://www.npmjs.com/package/@easyops-cn/docusaurus-search-local)
+[![Npm Version](https://img.shields.io/npm/v/@yang1666204/docusaurus-search-local)](https://www.npmjs.com/package/@yang1666204/docusaurus-search-local)
 [![CI Status](https://github.com/easyops-cn/docusaurus-search-local/workflows/gh-pages/badge.svg?event=push&branch=master)](https://github.com/easyops-cn/docusaurus-search-local/actions?query=workflow%3Agh-pages)
 [![Coverage Status](https://coveralls.io/repos/github/easyops-cn/docusaurus-search-local/badge.svg?branch=master)](https://coveralls.io/github/easyops-cn/docusaurus-search-local?branch=master)
 
@@ -33,14 +33,14 @@ https://easyops-cn.github.io/docusaurus-search-local/
 ## Installation
 
 ```shell
-npm install --save @easyops-cn/docusaurus-search-local
+npm install --save @yang1666204/docusaurus-search-local
 # or
-yarn add @easyops-cn/docusaurus-search-local
+yarn add @yang1666204/docusaurus-search-local
 ```
 
 ## Usage
 
-Add `@easyops-cn/docusaurus-search-local` into your docusaurus themes.
+Add `@yang1666204/docusaurus-search-local` into your docusaurus themes.
 
 ````js
 // In your `docusaurus.config.js`:
@@ -49,8 +49,8 @@ module.exports = {
   themes: [
     // ... Your other themes.
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      require.resolve("@yang1666204/docusaurus-search-local"),
+      /** @type {import("@yang1666204/docusaurus-search-local").PluginOptions} */
       ({
         // ... Your options.
         // `hashed` is recommended as long-term-cache of index file is possible.
@@ -179,13 +179,13 @@ In case some specific errors occurred:
 
 - `Error: Cannot mix different versions of joi schemas`:
 
-  - Try using @easyops-cn/docusaurus-search-local >= v0.16.0 with Docusaurus >= v2.0.0-alpha.73
-  - Try using @easyops-cn/docusaurus-search-local between v0.14.0 and v0.15.1 with Docusaurus between v2.0.0-alpha.68 and v2.0.0-alpha.72
-  - Or try using @easyops-cn/docusaurus-search-local <= v0.13.1 with Docusaurus <= v2.0.0-alpha.66
+  - Try using @yang1666204/docusaurus-search-local >= v0.16.0 with Docusaurus >= v2.0.0-alpha.73
+  - Try using @yang1666204/docusaurus-search-local between v0.14.0 and v0.15.1 with Docusaurus between v2.0.0-alpha.68 and v2.0.0-alpha.72
+  - Or try using @yang1666204/docusaurus-search-local <= v0.13.1 with Docusaurus <= v2.0.0-alpha.66
 
 - `Module not found: Error: Can't resolve '@docusaurus/useRouteContext'`:
-  - Try using @easyops-cn/docusaurus-search-local >= v0.25.0 with Docusaurus >= v2.0.0-beta.18
-  - Try using @easyops-cn/docusaurus-search-local < v0.25.0 with Docusaurus < v2.0.0-beta.18
+  - Try using @yang1666204/docusaurus-search-local >= v0.25.0 with Docusaurus >= v2.0.0-beta.18
+  - Try using @yang1666204/docusaurus-search-local < v0.25.0 with Docusaurus < v2.0.0-beta.18
 
 ## Further Reading
 

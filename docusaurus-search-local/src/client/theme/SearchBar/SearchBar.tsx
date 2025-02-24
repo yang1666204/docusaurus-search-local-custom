@@ -220,7 +220,7 @@ export default function SearchBar({
       if (versionUrl !== baseUrl) {
         if (!versionUrl.startsWith(baseUrl)) {
           throw new Error(
-            `Version url '${versionUrl}' does not start with base url '${baseUrl}', this is a bug of \`@easyops-cn/docusaurus-search-local\`, please report it.`
+            `Version url '${versionUrl}' does not start with base url '${baseUrl}', this is a bug of \`@yang1666204/docusaurus-search-local\`, please report it.`
           );
         }
         params.set("version", versionUrl.substring(baseUrl.length));

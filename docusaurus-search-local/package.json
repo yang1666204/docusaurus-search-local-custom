@@ -4,7 +4,7 @@
   "description": "An offline/local search plugin for Docusaurus v3",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yang1666204/docusaurus-search-local",
+    "url": "git+https://github.com/yang1666204/docusaurus-search-local.git",
     "directory": "packages/docusaurus-search-local"
   },
   "homepage": "https://github.com/yang1666204/docusaurus-search-local",

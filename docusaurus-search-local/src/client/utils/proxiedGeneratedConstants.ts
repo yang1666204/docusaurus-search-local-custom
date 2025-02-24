@@ -1,2 +1,2 @@
 // This file is auto generated while building.
-export * from "@generated/@easyops-cn/docusaurus-search-local/default/generated-constants.js";
+export * from "@generated/@yang1666204/docusaurus-search-local/default/generated-constants.js";
