@@ -8,7 +8,7 @@ export function sortSearchResults(results: InitialSearchResult[]): void {
   results.forEach((item, index) => {
     item.index = index;
   });
-
+  (results as SearchResult[]).sort((a, b) => b.score - a.score);
   // Put search results of headings/contents/descriptions just after
   // their belonged page's title, if existed.
   (results as SearchResult[]).sort((a, b) => {
@@ -43,5 +43,4 @@ export function sortSearchResults(results: InitialSearchResult[]): void {
 
     return aPageIndex - bPageIndex;
   });
-  (results as SearchResult[]).sort((a, b) => b.score - a.score);
 }
