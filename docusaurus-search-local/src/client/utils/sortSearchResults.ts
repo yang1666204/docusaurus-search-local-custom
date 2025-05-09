@@ -5,10 +5,17 @@ import {
 } from "../../shared/interfaces";
 
 export function sortSearchResults(results: InitialSearchResult[]): void {
+  results.forEach((item) => {
+    if (item.type === 0 && item.score) {
+      item.score *= 1.5;
+    }
+  });
+  // 需要先根据 score 排序，再赋值index；避免 release note因为先赋值了index导致排在前面
+  (results as SearchResult[]).sort((a, b) => b.score - a.score);
   results.forEach((item, index) => {
     item.index = index;
   });
-  (results as SearchResult[]).sort((a, b) => b.score - a.score);
+
   // Put search results of headings/contents/descriptions just after
   // their belonged page's title, if existed.
   (results as SearchResult[]).sort((a, b) => {
@@ -40,7 +47,8 @@ export function sortSearchResults(results: InitialSearchResult[]): void {
       const diff = (b.type === 0 ? 1 : 0) - (a.type === 0 ? 1 : 0);
       return diff === 0 ? a.index - b.index : diff;
     }
-
+    // 返回值大于 0 [b,a]
+    // 返回值小于 0 [a,b]
     return aPageIndex - bPageIndex;
   });
 }
